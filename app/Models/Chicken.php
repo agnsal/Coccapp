@@ -9,5 +9,5 @@ class Chicken extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'is_female'];
+    protected $fillable = ['name', 'is_female', 'birth_date', 'details'];
 }

@@ -16,7 +16,7 @@ class CreateCoopsTable extends Migration
         Schema::create('coops', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->json('details')->nullable();
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@ class Coop extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description'];
+    protected $fillable = ['name', 'details'];
 
     public function users()
     {

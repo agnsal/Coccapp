@@ -16,7 +16,7 @@ class CreateBreedsTable extends Migration
         Schema::create('breeds', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description')->nullable();
+            $table->json('details')->nullable();
             $table->timestamps();
         });
     }

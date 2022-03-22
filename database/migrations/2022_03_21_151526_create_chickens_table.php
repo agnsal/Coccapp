@@ -17,6 +17,8 @@ class CreateChickensTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->boolean('is_female');
+            $table->timestamp('birth_date')->default('CURRENT_TIMESTAMP ');
+            $table->json('details')->nullable();
             $table->timestamps();
         });
     }

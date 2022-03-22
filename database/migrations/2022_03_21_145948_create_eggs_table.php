@@ -16,7 +16,8 @@ class CreateEggsTable extends Migration
         Schema::create('eggs', function (Blueprint $table) {
             $table->id();
             $table->boolean('damaged')->default(false);
-            $table->dateTime('layedAt')->nullable();
+            $table->timestamp('layed_at')->default('CURRENT_TIMESTAMP');
+            $table->json('details')->nullable();
             $table->timestamps();
         });
     }

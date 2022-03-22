@@ -9,5 +9,5 @@ class Egg extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['damaged', 'layedAt'];
+    protected $fillable = ['damaged', 'layed_at', 'details'];
 }
