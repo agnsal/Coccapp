@@ -17,6 +17,14 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
      - ```composer require laravel/ui```
      - ```php artisan ui vue```
      - ```php artisan ui vue --auth```
-     - ```npm install && npm run dev```
-Or:
-     - ```npm install && npm install vue && npm install vuex --save```
+     - ```npm install```
+     - ```npm update vue-loader```
+     - ```npm install vuex --save```
+     - ```npm run dev```
+     - ```npm run watch```
+    
+    Or:
+     - ```npm install```
+     - ```npm install -g npm-install-peers```
+     - ```npm install vue```
+     - ```npm install vuex --save```
