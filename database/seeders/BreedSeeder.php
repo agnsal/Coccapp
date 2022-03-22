@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Breed;
+use App\Models\Enums\BreedEnum;
 use Illuminate\Database\Seeder;
 
 class BreedSeeder extends Seeder
@@ -13,6 +15,7 @@ class BreedSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $breedsNames = BreedEnum::cases();
+        collect($breedsNames)->map(fn($v, $k) => Breed::create(['name' => $v]));
     }
 }

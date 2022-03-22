@@ -11,4 +11,5 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
 5. To create Models: ```php artisan make-model <modelName> -a```
 6. To have the proper DB structure: fill models migrations and migrate ```php artisan migrate```
 7. To rebuild the entire DB structure: ```php artisan migrate:fresh```
-8. ```npm install vuex --save```
+8. To populate the DB via Seeders: ```php artisan db:seed --class=<seederName>```
+9. ```npm install vuex --save```
