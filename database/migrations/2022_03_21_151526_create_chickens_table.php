@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use \Illuminate\Support\Facades\DB;
 
 class CreateChickensTable extends Migration
 {
@@ -17,7 +18,7 @@ class CreateChickensTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->boolean('is_female');
-            $table->timestamp('birth_date')->default('CURRENT_TIMESTAMP ');
+            $table->timestamp('birth_date')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->json('details')->nullable();
             $table->timestamps();
         });
