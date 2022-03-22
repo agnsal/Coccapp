@@ -10,4 +10,8 @@ class Breed extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'details'];
+
+    public function chickens(){
+        return $this->hasMany(Chicken::class);
+    }
 }

@@ -16,4 +16,12 @@ class Coop extends Model
         return $this->belongsToMany(User::class,'coops_users');
     }
 
+    public function chickens(){
+        return $this->hasMany(Chicken::class);
+    }
+
+    public function eggs(){
+        return $this->hasMany(Egg::class);
+    }
+
 }
