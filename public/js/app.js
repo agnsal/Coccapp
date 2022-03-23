@@ -12484,8 +12484,8 @@ var __webpack_exports__ = {};
   !*** ./resources/js/index.js ***!
   \*******************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var _components_HelloWorld__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/HelloWorld */ "./resources/js/components/HelloWorld.vue");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _components_HelloWorld__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/HelloWorld */ "./resources/js/components/HelloWorld.vue");
 /* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.vue */ "./resources/js/App.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -12493,6 +12493,7 @@ __webpack_require__.r(__webpack_exports__);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].config.devtools = true;
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -12505,7 +12506,7 @@ __webpack_require__.r(__webpack_exports__);
 // Vue.component('hello-world', require('./components/HelloWorld.vue').default);  // Not very performing
 
 
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('HelloWorld', _components_HelloWorld__WEBPACK_IMPORTED_MODULE_0__["default"]); // Vue.component('example-component', require('./components/ExampleComponent').default);
+vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('HelloWorld', _components_HelloWorld__WEBPACK_IMPORTED_MODULE_1__["default"]); // Vue.component('example-component', require('./components/ExampleComponent').default);
 
 
 /**
@@ -12514,7 +12515,7 @@ vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('HelloWorld', _components_
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
+var app = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
   el: '#app',
   components: {
     App: _App_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
