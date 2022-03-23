@@ -1,13 +1,12 @@
 <template>
-    <div id="app">
-        <ExampleComponent/>
+    <div>
+        <HelloWorld/>
     </div>
 </template>
 
 <script>
-import ExampleComponent from "./components/ExampleComponent";
     export default {
-        name: "app",
-        components: ExampleComponent
+        name: "App",
+        components: {}
     }
 </script>

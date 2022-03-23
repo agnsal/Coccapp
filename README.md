@@ -14,19 +14,8 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
 7. To rebuild the entire DB structure: ```php artisan migrate:fresh```
 8. To populate the DB via Seeders: ```php artisan db:seed --class=<seederName>```
 9. Run the server: ```php artisan serve```
-10. Install Vue and Vuex:
-     - ```composer require laravel/ui```
-     - ```php artisan ui vue```
-     - ```php artisan ui vue --auth```
+10. Install Vuex:
      - ```npm install```
-     - ```npm update vue-loader```
-     - ```npm install vuex --save```
-     - ```npm run dev```
-     - ```npm run watch```
-     - ```npm run start``` or ```npm run serve```
-    
-    Or:
-     - ```npm install```
-     - ```npm install -g npm-install-peers```
-     - ```npm install vue```
-     - ```npm install vuex --save```
+     - ```npm install vuex```
+     - ```npm run dev``` or ```npm run watch```
+     
