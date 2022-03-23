@@ -15,7 +15,10 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
 8. To populate the DB via Seeders: ```php artisan db:seed --class=<seederName>```
 9. Run the server: ```php artisan serve```
 10. Install Vuex:
+     - [```php artisan ui vue```]
+     - [```php artisan ui vue --auth```]
      - ```npm install```
      - ```npm install vuex```
      - ```npm run dev``` or ```npm run watch```
+     - ```npm run start``` or ```npm run serve```
      
