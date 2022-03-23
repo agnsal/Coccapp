@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Enums\BreedEnum;
+use App\Casts\BreedCast;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,7 +13,8 @@ class Breed extends Model
     protected $fillable = ['details'];
 
     protected $casts = [
-        'name' => BreedEnum::class
+//        'name' => BreedEnum::class
+        'name' => BreedCast::class
     ];
 
     public function chickens(){
