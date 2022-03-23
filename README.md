@@ -22,6 +22,7 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
      - ```npm install vuex --save```
      - ```npm run dev```
      - ```npm run watch```
+     - ```npm run start``` or ```npm run serve```
     
     Or:
      - ```npm install```

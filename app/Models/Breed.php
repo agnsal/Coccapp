@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Enums\BreedEnum;
+use App\Enums\BreedEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
