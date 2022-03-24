@@ -22,7 +22,7 @@
 <body>
     @extends('layouts.app')
     @section('content')
-        <div id="app">App div:</div>
+        <div id="app"></div>
     @endsection
 </body>
 </html>
