@@ -15,9 +15,11 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+import Vue from 'vue';
 
-window.Vue = require('vue').default;
+// require('./bootstrap');
+//
+// window.Vue = require('vue').default;
 
 /**
  * The following block of code may be used to automatically register your
@@ -30,9 +32,14 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-
 // import ComponentName from ...;
 // Vue.use('component-name', ComponentName);
+import Coop from "./components/home/Coop";
+Vue.component("Coop", Coop);
+
+import CoopsCollection from "./components/home/CoopsCollection";
+Vue.component("CoopsCollection", CoopsCollection);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -44,6 +51,8 @@ import Coccapp from "./Coccapp";
 
 const app = new Vue({
     el: '#app',
-    components: {Coccapp},
+    components: {
+        Coccapp
+    },
     template: '<Coccapp/>'
 });

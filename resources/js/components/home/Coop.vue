@@ -1,22 +1,11 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        Coop Component
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <p>I am a Coop!!!</p>
 </template>
 
 <script>
     export default {
         name: 'Coop',
+        props: ['coopName'],
         mounted() {
             console.log('Coop mounted.');
         }

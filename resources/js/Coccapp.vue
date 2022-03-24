@@ -1,10 +1,10 @@
 <template>
-<p>Hello Vue!!!!!!!</p>
+    <CoopsCollection/>
 </template>
 
 <script>
 export default {
-    name: "Coccapp"
+    name: "Coccapp",
 }
 </script>
 
