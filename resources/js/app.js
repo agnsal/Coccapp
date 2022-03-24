@@ -16,6 +16,11 @@
  */
 
 import Vue from 'vue';
+import Vuetify from "vuetify";
+import "vuetify/dist/vuetify.min.css";
+import '@mdi/font/css/materialdesignicons.css'
+
+Vue.use(Vuetify);
 
 // require('./bootstrap');
 //
@@ -34,6 +39,9 @@ import Vue from 'vue';
 
 // import ComponentName from ...;
 // Vue.use('component-name', ComponentName);
+import TopMenu from "./components/home/TopMenu";
+Vue.component("TopMenu", TopMenu);
+
 import Coop from "./components/home/Coop";
 Vue.component("Coop", Coop);
 
@@ -51,8 +59,12 @@ import Coccapp from "./Coccapp";
 
 const app = new Vue({
     el: '#app',
+    vuetify: new Vuetify({
+        icons: {iconfont: "mdi"},
+        // theme: {dark: false}
+    }),
     components: {
         Coccapp
     },
-    template: '<Coccapp/>'
+    template: '<Coccapp/>',
 });

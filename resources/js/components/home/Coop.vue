@@ -1,5 +1,5 @@
 <template>
-    <p>I am a Coop!!!</p>
+    <p>Coop: {{coopName}}</p>
 </template>
 
 <script>

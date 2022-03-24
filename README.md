@@ -20,9 +20,11 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
      - ```npm install```
      - ```npm install sass-loader```
      - ```npm install vuex```
+     - ```npm install vuetify```
+     - ```npm install @mdi/font -D```
      - ```npm run dev``` or ```npm run watch```
      - ```npm run start``` or ```npm run serve```
-     - If you have any issue, try: ```npm clean-install```; ```npm i vue-loader```; [```npm install --global webpack```]; [npm install vue-template-compiler vue-loader@^15.9.7 --save-dev --legacy-peer-deps] 
+     - If you have any issue, try: ```npm clean-install```; ```npm i vue-loader```; [```npm install --global webpack```]; [npm install vue-template-compiler vue-loader@^15.9.7 --save-dev --legacy-peer-deps]
 
 
 ## Contacts

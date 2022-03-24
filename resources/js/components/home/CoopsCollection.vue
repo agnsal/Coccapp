@@ -5,7 +5,6 @@
                 <div class="card">
                     <div class="card-header">My Coops</div>
                     <div class="card-body">
-                        Coops Collection!!!
                         <Coop v-for="(coop, index) in coopsList" :key="index" :coopName="coop.name"></Coop>
                     </div>
                 </div>
