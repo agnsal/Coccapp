@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-app-bar
-            dark
+            light
             class="top-bar"
         >
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
@@ -55,7 +55,7 @@ export default {
 
 <style scoped>
 .top-bar{
-    background-color: rgb(233, 110, 5) !important;
-    border-color: rgb(233, 110, 5);
+    background-color: #F57F17 !important;
+    border-color: #F57F17;
 }
 </style>

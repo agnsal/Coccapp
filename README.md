@@ -1,5 +1,5 @@
 # Coccapp
-Laravel + Vue.js + Vuex SPA app.
+Laravel + Vue.js + Vuex + Vuetify SPA app.
 
 ## Behind the scenes
 ### Laravel + Vue.js + Vuex app creation

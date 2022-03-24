@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="coccaBkg">
         <TopMenu/>
         <CoopsCollection/>
     </div>
@@ -12,6 +12,10 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+.coccaBkg{
+    background-image: url('./images/chicken-feet.png');
+    height: 100vh;
+    background-color: #FFFF8D
+}
 </style>
