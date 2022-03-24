@@ -1,7 +1,6 @@
 <template>
     <v-card
-        class="mx-auto"
-        max-width="300"
+        class="mx-auto centered"
         tile
     >
         <v-list dense>
@@ -50,3 +49,9 @@
         }
     }
 </script>
+
+<style>
+.centered{
+    width: 70vw;
+}
+</style>
