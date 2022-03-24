@@ -1,5 +1,5 @@
 # Coccapp
-Laravel + Vue.js + Vuex app.
+Laravel + Vue.js + Vuex SPA app.
 
 ## Behind the scenes
 ### Laravel + Vue.js + Vuex app creation
@@ -15,10 +15,25 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
 8. To populate the DB via Seeders: ```php artisan db:seed --class=<seederName>```
 9. Run the server: ```php artisan serve```
 10. Install Vuex:
-     - [```php artisan ui vue```]
-     - [```php artisan ui vue --auth```]
+     - To download Vue in Laravel: ```composer require laravel/ui```
+     - To install Vue in Laravel: ```php artisan ui vue --auth``` auth flag is needed for authentication only
      - ```npm install```
      - ```npm install vuex```
      - ```npm run dev``` or ```npm run watch```
      - ```npm run start``` or ```npm run serve```
-     
+
+
+## Contacts
+Agnese Salutari – agneses92@hotmail.it
+
+Distributed under the Apache License 2.0. See ``LICENSE`` for more information.
+
+[https://github.com/agnsal](https://github.com/agnsal)
+
+
+## Contributing
+1. Fork it (<https://github.com/yourname/yourproject/fork>)
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -am 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
