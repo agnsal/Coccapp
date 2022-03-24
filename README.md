@@ -11,7 +11,6 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
 5. To create Models: ```php artisan make:model <modelName> -a```
 6. To create Casts: ```php artisan make:cast <cast --class=BreedName>```
 7. To have the proper DB structure: fill models migrations and migrate ```php artisan migrate```
-8. 
 9. To rebuild the entire DB structure: ```php artisan migrate:fresh```
 10. To populate the DB via Seeders: ```php artisan db:seed --class=<seederName>```
 11. Run the server: ```php artisan serve```
@@ -19,9 +18,11 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
      - To download Vue in Laravel: ```composer require laravel/ui```
      - To install Vue in Laravel: ```php artisan ui vue --auth``` auth flag is needed for authentication only
      - ```npm install```
+     - ```npm install sass-loader```
      - ```npm install vuex```
      - ```npm run dev``` or ```npm run watch```
      - ```npm run start``` or ```npm run serve```
+     - If you have any issue, try: ```npm clean-install```; ```npm i vue-loader```; [```npm install --global webpack```]; [npm install vue-template-compiler vue-loader@^15.9.7 --save-dev --legacy-peer-deps] 
 
 
 ## Contacts
