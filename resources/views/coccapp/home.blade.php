@@ -22,7 +22,7 @@
 <body>
     @extends('layouts.app')
     @section('content')
-        <div id="app">Hello Vue!!!</div>
+        <div id="app">App div:</div>
     @endsection
 </body>
 </html>

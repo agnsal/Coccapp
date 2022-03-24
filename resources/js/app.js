@@ -38,10 +38,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import homeTemplate from "../views/coccapp/home.blade.php";
+// import homeTemplate from "../views/coccapp/home.blade.php";
 
 const app = new Vue({
     el: '#app',
     // components: {},
-    template: 'homeTemplate'
+    template: '<p>Hello Vue!!!</p>'
 });

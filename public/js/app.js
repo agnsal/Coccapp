@@ -5294,12 +5294,8 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _views_coccapp_home_blade_php__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../views/coccapp/home.blade.php */ "./resources/views/coccapp/home.blade.php");
-/* harmony import */ var _views_coccapp_home_blade_php__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_views_coccapp_home_blade_php__WEBPACK_IMPORTED_MODULE_0__);
 /**
  Copyright 2022 Agnese Salutari.
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -5335,12 +5331,12 @@ Vue.component('example-component', (__webpack_require__(/*! ./components/Example
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+// import homeTemplate from "../views/coccapp/home.blade.php";
 
 var app = new Vue({
   el: '#app',
   // components: {},
-  template: 'homeTemplate'
+  template: '<p>Hello Vue!!!</p>'
 });
 
 /***/ }),
@@ -40104,16 +40100,6 @@ Vue.compile = compileToFunctions;
 
 /***/ }),
 
-/***/ "./resources/views/coccapp/home.blade.php":
-/*!************************************************!*\
-  !*** ./resources/views/coccapp/home.blade.php ***!
-  \************************************************/
-/***/ (() => {
-
-throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> <!doctype html>\n| <html lang=\"{{ str_replace('_', '-', app()->getLocale()) }}\">\n| <head>");
-
-/***/ }),
-
 /***/ "./node_modules/axios/package.json":
 /*!*****************************************!*\
   !*** ./node_modules/axios/package.json ***!
@@ -40187,18 +40173,6 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	
