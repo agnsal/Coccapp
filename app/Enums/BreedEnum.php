@@ -19,4 +19,9 @@ enum BreedEnum:string
     case RODE_ISLAND_RED = 'rhodeIslandRed';
     case ARAUCANA = 'araucana';
     case OLIVE_EGGER = 'oliveEgger';
+    case OTHER = 'other';
+
+    public static function getDefault() : string {
+        return self::OTHER->value;
+    }
 }
