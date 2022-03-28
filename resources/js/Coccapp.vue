@@ -18,4 +18,10 @@ export default {
     height: 100vh;
     background-color: #FFFF8D
 }
+.orangeBkg {
+    background-color: #F57F17 !important;
+}
+.centered{
+    text-align: center;
+}
 </style>

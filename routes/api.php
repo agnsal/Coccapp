@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/coop/index', [CoopController::class, 'index']);
+Route::get('/coop/collection', [CoopController::class, 'index']);
