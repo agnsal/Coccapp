@@ -9,7 +9,7 @@
                 v-model="selectedItem"
             >
                 <v-list-item
-                    v-for="(item, i) in items"
+                    v-for="(item, i) in coopsCollection"
                     :key="i"
                 >
                     <v-list-item-icon>
@@ -28,29 +28,29 @@
     // import Coop from "./Coop";
     export default {
         name: 'CoopsCollection',
-        // components: {Coop},
         data: () => ({
             selectedItem: 0,
-            items: [
-                {
-                    'id': 0,
-                    'icon': 'mdi-egg',
-                    'name': 'happyCoop'
-                },
-                {
-                    'id': 1,
-                    'icon': 'mdi-egg',
-                    'name': 'myCoop'
-                }
-            ]
+            coopsCollection: []
         }),
-        mounted() {
-            console.log('Coop mounted.');
-        }
+        methods: {
+            getCoopsCollection(){
+                axios.get('api/coop/index').then(response => {
+                    this.coopsCollection = response.data
+                }).catch(error => {
+                    console.log(error);  // Test
+                });
+            }
+        },
+        created() {
+            this.getCoopsCollection();
+        },
+        // mounted() {
+        //     console.log('Coop mounted.');
+        // }
     }
 </script>
 
-<style>
+<style scoped>
 .centered{
     width: 70vw;
 }

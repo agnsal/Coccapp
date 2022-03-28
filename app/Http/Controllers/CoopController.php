@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\CoopResource;
 use App\Models\Coop;
 use App\Http\Requests\StoreCoopRequest;
 use App\Http\Requests\UpdateCoopRequest;
@@ -11,11 +12,11 @@ class CoopController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+//     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return response()->json(CoopResource::collection(Coop::all()));
     }
 
     /**

@@ -22,6 +22,8 @@ import '@mdi/font/css/materialdesignicons.css'
 
 Vue.use(Vuetify);
 
+window.axios = require('axios');
+
 // require('./bootstrap');
 //
 // window.Vue = require('vue').default;
