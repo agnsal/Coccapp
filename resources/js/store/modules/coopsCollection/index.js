@@ -14,40 +14,28 @@ const mutations = {
 }
 
 const actions = {
-    getCoopsCollection ({ commit }) {
+    retrieveCoopsCollection ({commit}) {  // or (context) => context.commit inside the function
         axios.get('api/coop/collection').then((response) => {
             commit('UPDATE_COOPS_COLLECTION', response.data)
         });
     },
-    // addCartItem ({ commit }, cartItem) {
-    //     axios.post('/api/cart', cartItem).then((response) => {
-    //         commit('UPDATE_CART_ITEMS', response.data)
-    //     });
-    // },
-    // removeCartItem ({ commit }, cartItem) {
-    //     axios.post('/api/cart/delete', cartItem).then((response) => {
-    //         commit('UPDATE_CART_ITEMS', response.data)
-    //     });
-    // },
-    // removeAllCartItems ({ commit }) {
-    //     axios.post('/api/cart/delete/all').then((response) => {
-    //         commit('UPDATE_CART_ITEMS', response.data)
-    //     });
-    // }
+    addCoop({commit}, payload){
+        axios.post('api/coop/new', payload).then((response) => {
+            commit('ADD_COOP', payload)
+        });
+    }
 }
 
 const getters = {
+    // coopsCollection(state){
+    //     return state.coopsCollection;
+    // },
     coopsCollection: state => state.coopsCollection,
     // cartTotal: state => {
     //     return state.cartItems.reduce((acc, cartItem) => {
     //         return (cartItem.quantity * cartItem.price) + acc;
     //     }, 0).toFixed(2);
     // },
-    // cartQuantity: state => {
-    //     return state.cartItems.reduce((acc, cartItem) => {
-    //         return cartItem.quantity + acc;
-    //     }, 0);
-    // }
 }
 
 const coopsCollectionModule = {
