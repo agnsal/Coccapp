@@ -7,6 +7,7 @@ use App\Models\Coop;
 use App\Http\Requests\StoreCoopRequest;
 use App\Http\Requests\UpdateCoopRequest;
 use App\Models\User;
+use App\Services\GUIdo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -30,11 +31,9 @@ class CoopController extends Controller
      */
     public function create()
     {
-        return response()->json([
-            'name' => [
-
-            ]
-        ]);
+        return response()->json(GUIdo::makeForm([
+            'name' => ['label' => 'Name', 'required' => true, 'length' => '< 30'],
+        ]));
     }
 
     /**
