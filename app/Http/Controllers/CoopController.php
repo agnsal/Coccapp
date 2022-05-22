@@ -61,22 +61,24 @@ class CoopController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Coop  $coop
-     * @return \Illuminate\Http\Response
+//     * @return \Illuminate\Http\Response
      */
     public function show(Coop $coop)
     {
-        //
+        return response()->json(CoopResource::collection(Coop::with('chickens')->find($coop->id)->get())->resolve());
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Coop  $coop
-     * @return \Illuminate\Http\Response
+//     * @return \Illuminate\Http\Response
      */
     public function edit(Coop $coop)
     {
-        //
+        return response()->json(GUIdo::makeForm([
+            'name' => ['label' => 'Name', 'required' => true, 'length' => '< 30', 'placeholder' => $coop->name],
+        ]));
     }
 
     /**
@@ -88,7 +90,17 @@ class CoopController extends Controller
      */
     public function update(UpdateCoopRequest $request, Coop $coop)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+        ]);
+        try {
+            DB::beginTransaction();
+            $newCoop = Coop::update($validated);
+            $newCoop->users()->associate(User::find(Auth::id()))->save(); // or Auth::user()->id
+            DB::commit();
+        } catch (Throwable $e) {
+            DB::rollback();
+        }
     }
 
     /**
@@ -99,6 +111,6 @@ class CoopController extends Controller
      */
     public function destroy(Coop $coop)
     {
-        //
+        $coop->delete();
     }
 }
