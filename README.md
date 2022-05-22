@@ -16,6 +16,7 @@ or: ```composer global require laravel/installer && laravel new Coccapp```
 10. To populate the DB via Seeders: ```php artisan db:seed --class=<seederName>```
 11. To enable Service creation with artisan: ```composer require timwassenburg/laravel-service-generator```
 11. To create a Service: ```php artisan make:service <serviceName>```
+11. To create a Command: ```php artisan make:command <commandName>```
 12. Run the server: ```php artisan serve```
 13. Install Vuex:
      - To download Vue in Laravel: ```composer require laravel/ui```

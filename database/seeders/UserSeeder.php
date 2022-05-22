@@ -12,12 +12,10 @@ See the License for the specific language governing permissions and limitations 
 
 namespace Database\Seeders;
 
-use App\Models\Coop;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
-class CoopSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -26,15 +24,10 @@ class CoopSeeder extends Seeder
      */
     public function run()
     {
-        try {
-            DB::beginTransaction();
-            $newCoop = Coop::create([
-                'name' => "agnese's coop"
-            ]);
-            $newCoop->users()->attach(User::where('email', 'test@test.it')->first());
-            DB::commit();
-        }catch (Throwable $e) {
-            DB::rollback();
-        }
+        User::create([
+            'name' => 'agnese',
+            'email' => 'test@test.it',
+            'password' => 'agnese'
+        ]);
     }
 }

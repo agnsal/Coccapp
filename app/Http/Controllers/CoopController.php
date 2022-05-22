@@ -60,7 +60,7 @@ class CoopController extends Controller
         try {
             DB::beginTransaction();
             $newCoop = Coop::create($validated);
-            $newCoop->users()->associate(User::find(Auth::id()))->save(); // or Auth::user()->id
+            $newCoop->users()->attach(User::find(Auth::id()))->save(); // or Auth::user()->id
             DB::commit();
         } catch (Throwable $e) {
             DB::rollback();

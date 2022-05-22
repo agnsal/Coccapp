@@ -12,7 +12,11 @@ See the License for the specific language governing permissions and limitations 
 
 namespace Database\Seeders;
 
+use App\Models\Breed;
+use App\Models\Chicken;
+use App\Models\Coop;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ChickenSeeder extends Seeder
 {
@@ -23,6 +27,21 @@ class ChickenSeeder extends Seeder
      */
     public function run()
     {
-        //
+        try{
+            DB::beginTransaction();
+            $chick = new Chicken([
+                'name' => 'PioPio',
+                'is_female' => true
+            ]);
+            $chick->breed()->associate(1);
+//            $chick->breed()->associate(Breed::where('name', 'other')->first()->id);
+            $chick->coop()->associate(Coop::find(1)->first()->id);
+            $chick->save();
+            DB::commit();
+        } catch (Throwable $e) {
+            DB::rollback();
+        }
+
+
     }
 }
