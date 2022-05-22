@@ -6,6 +6,9 @@ use App\Http\Resources\CoopResource;
 use App\Models\Coop;
 use App\Http\Requests\StoreCoopRequest;
 use App\Http\Requests\UpdateCoopRequest;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CoopController extends Controller
 {
@@ -16,17 +19,20 @@ class CoopController extends Controller
      */
     public function index()
     {
-        return response()->json(CoopResource::collection(Coop::all()));
+        return response()->json(CoopResource::collection(Coop::with('chickens')->get())->resolve());
+//        return response()->json(CoopResource::collection(Coop::all()));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+//     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return response()->json([
+            'name' => ''
+        ]);
     }
 
     /**
@@ -37,7 +43,17 @@ class CoopController extends Controller
      */
     public function store(StoreCoopRequest $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+        ]);
+        try {
+            DB::beginTransaction();
+            $newCoop = Coop::create($validated);
+            $newCoop->users()->associate(User::find(Auth::id()))->save(); // or Auth::user()->id
+            DB::commit();
+        } catch (Throwable $e) {
+            DB::rollback();
+        }
     }
 
     /**

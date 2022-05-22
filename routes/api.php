@@ -19,4 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/coop/collection', [CoopController::class, 'index']);
+//Route::get('/coop/collection', [CoopController::class, 'index']);
+
+Route::prefix('coop')->group(function(){
+    Route::resource('coop', CoopController::class);  // It provides all standard CRUD routes for the specified model/controller
+});
