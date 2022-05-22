@@ -7,5 +7,7 @@ namespace App\Services;
  */
 class GUIdo
 {
-
+    public static function makeForm($skeleton){
+        return [];  // toDo: complete
+    }
 }
