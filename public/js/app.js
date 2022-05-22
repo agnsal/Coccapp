@@ -2094,11 +2094,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Coop',
-  props: ['coopName'],
+  props: ['coopData'],
   mounted: function mounted() {
     console.log('Coop mounted.');
+  },
+  computed: {
+    countedChickens: function countedChickens() {
+      return this.coopData.chickens.length;
+    }
   }
 });
 
@@ -2144,8 +2157,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 // import Coop from "./Coop";
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'CoopsCollection',
@@ -2159,7 +2170,7 @@ __webpack_require__.r(__webpack_exports__);
     getCoopsCollection: function getCoopsCollection() {
       var _this = this;
 
-      axios.get('api/coop/collection').then(function (response) {
+      axios.get('api/coop/coop').then(function (response) {
         _this.coopsCollection = response.data;
       })["catch"](function (error) {
         console.log(error); // Test
@@ -2280,7 +2291,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 vue__WEBPACK_IMPORTED_MODULE_2__["default"].use((vuetify__WEBPACK_IMPORTED_MODULE_3___default()));
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"); // require('./bootstrap');
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"); // import store from './store';
+// require('./bootstrap');
 //
 // window.Vue = require('vue').default;
 
@@ -3556,7 +3568,17 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("p", [_vm._v("Coop: " + _vm._s(_vm.coopName))])
+  return _c(
+    "p",
+    [
+      _vm._v(_vm._s(_vm.coopData.name) + "\n    "),
+      _c("v-icon", { attrs: { large: "", color: "green darken-2" } }, [
+        _vm._v("\n        mdi-feather\n    "),
+      ]),
+      _vm._v("\n    " + _vm._s(_vm.countedChickens) + "\n"),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -3600,18 +3622,8 @@ var render = function () {
                   { key: i },
                   [
                     _c(
-                      "v-list-item-icon",
-                      [
-                        _c("v-icon", {
-                          domProps: { textContent: _vm._s(item.icon) },
-                        }),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
                       "v-list-item-content",
-                      [_c("Coop", { attrs: { "coop-name": item.name } })],
+                      [_c("Coop", { attrs: { "coop-data": item } })],
                       1
                     ),
                   ],
@@ -3624,7 +3636,9 @@ var render = function () {
                 { staticClass: "mx-2 orangeBkg centered", attrs: { fab: "" } },
                 [
                   _c("v-icon", { attrs: { dark: "" } }, [
-                    _vm._v("\n                    mdi-plus\n                "),
+                    _vm._v(
+                      "\n                        mdi-plus\n                    "
+                    ),
                   ]),
                 ],
                 1

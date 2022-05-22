@@ -15,7 +15,8 @@ const mutations = {
 
 const actions = {
     retrieveCoopsCollection ({commit}) {  // or (context) => context.commit inside the function
-        axios.get('api/coop/collection').then((response) => {
+        axios.get('api/coop/coop').then((response) => {
+            console.log(response.data);
             commit('UPDATE_COOPS_COLLECTION', response.data)
         });
     },

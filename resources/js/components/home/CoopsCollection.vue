@@ -9,11 +9,9 @@
                 <v-list-item
                     v-for="(item, i) in coopsCollection"
                     :key="i">
-                    <v-list-item-icon>
-                        <v-icon v-text="item.icon"></v-icon>
-                    </v-list-item-icon>
+<!--                    {{item}}-->
                     <v-list-item-content>
-                        <Coop :coop-name="item.name"/>
+                        <Coop :coop-data="item"/>
                     </v-list-item-content>
                 </v-list-item>
                 <v-btn
@@ -39,7 +37,7 @@
         }),
         methods: {
             getCoopsCollection(){
-                axios.get('api/coop/collection').then(response => {
+                axios.get('api/coop/coop').then(response => {
                     this.coopsCollection = response.data
                 }).catch(error => {
                     console.log(error);  // Test

@@ -24,7 +24,7 @@ Vue.use(Vuetify);
 
 window.axios = require('axios');
 
-import store from './store';
+// import store from './store';
 
 
 // require('./bootstrap');
