@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use \Illuminate\Support\Facades\DB;
 use \App\Models\Breed;
 use \App\Models\Coop;
+use \App\Models\Chicken;
 
 class CreateEggsTable extends Migration
 {
@@ -23,6 +24,7 @@ class CreateEggsTable extends Migration
             $table->json('details')->nullable();
             $table->foreignIdFor(Breed::class, 'breed_id')->onUpdate('cascade');
             $table->foreignIdFor(Coop::class, 'coop_id')->onUpdate('cascade');
+            $table->foreignIdFor(Chicken::class, 'hen_id')->onUpdate('cascade');
             $table->timestamps();
         });
     }

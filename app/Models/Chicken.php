@@ -29,4 +29,8 @@ class Chicken extends Model
         return $this->belongsTo(Coop::class);
     }
 
+    public function eggs(){
+        return $this->hasMany(Egg::class);
+    }
+
 }

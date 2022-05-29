@@ -28,4 +28,8 @@ class Egg extends Model
     public function coop(){
         return $this->belongsTo(Coop::class);
     }
+
+    public function hen(){
+        return $this->belongsTo(Chicken::class);
+    }
 }

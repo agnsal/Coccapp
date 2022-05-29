@@ -35,7 +35,7 @@ class ChickenSeeder extends Seeder
             ]);
             $chick->breed()->associate(1);
 //            $chick->breed()->associate(Breed::where('name', 'other')->first()->id);
-            $chick->coop()->associate(Coop::find(1)->first()->id);
+            $chick->coop()->associate(1);
             $chick->save();
             DB::commit();
         } catch (Throwable $e) {
