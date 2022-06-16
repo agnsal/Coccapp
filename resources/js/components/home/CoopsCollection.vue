@@ -8,9 +8,8 @@
         <v-list dense>
             <v-list-item-group>
                 <v-list-item v-for="(item, i) in coopsCollection" :key="i">
-<!--                    {{item}}-->
                     <v-list-item-content @click="selectedCoop = i">
-                        <Coop :coop-data="item" :detailed="selectedCoop === i"/>
+                        <Coop @click="selectedCoop = null" :coop-data="item" :detailed="selectedCoop === i"/>
                     </v-list-item-content>
                 </v-list-item>
             </v-list-item-group>

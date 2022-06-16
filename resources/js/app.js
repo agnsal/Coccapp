@@ -47,6 +47,9 @@ window.axios = require('axios');
 import TopMenu from "./components/home/TopMenu";
 Vue.component("TopMenu", TopMenu);
 
+import CloseXButton from "./components/CloseXButton";
+Vue.component("CloseXButton", CloseXButton);
+
 import Coop from "./components/home/Coop";
 Vue.component("Coop", Coop);
 

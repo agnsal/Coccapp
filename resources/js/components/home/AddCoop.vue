@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-form v-if="!hideForm" v-model="formData">
+        <v-form v-if="!hideForm" v-model="valid">
             <v-container>
                 <v-row>
                     <v-col
@@ -8,8 +8,8 @@
                         md="4"
                     >
                         <v-text-field
-                            v-model="name"
-                            :rules="nameRules"
+                            v-model="formData.name"
+                            :rules="formRules.nameRules"
                             :counter="20"
                             label="Coop name"
                             required
@@ -32,8 +32,9 @@ export default {
     name: "AddCoop",
     data() {
         return {
+            valid: false,
             hideForm: true,
-            formData: null,
+            formData: {'name': ''},
             formRules: {
                 nameRules: [
                     v => !!v || 'Name is required',
