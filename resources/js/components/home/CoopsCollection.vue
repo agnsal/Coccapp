@@ -1,10 +1,11 @@
 <template>
     <v-card
         class="mx-auto centered"
+        max-width="700"
         tile
     >
+        <v-card-title>My Coops</v-card-title>
         <v-list dense>
-            <v-subheader>My Coops</v-subheader>
             <v-list-item-group>
                 <v-list-item
                     v-for="(item, i) in coopsCollection"
@@ -14,14 +15,7 @@
                         <Coop :coop-data="item"/>
                     </v-list-item-content>
                 </v-list-item>
-                <v-btn
-                    class="mx-2 orangeBkg centered"
-                    fab
-                >
-                    <v-icon dark>
-                        mdi-plus
-                    </v-icon>
-                </v-btn>
+                <AddButton/>
             </v-list-item-group>
         </v-list>
     </v-card>
