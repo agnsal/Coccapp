@@ -50,8 +50,8 @@ Vue.component("TopMenu", TopMenu);
 import Coop from "./components/home/Coop";
 Vue.component("Coop", Coop);
 
-import AddButton from "./components/home/AddButton"
-Vue.component("AddButton", AddButton);
+import AddCoop from "./components/home/AddCoop"
+Vue.component("AddCoop", AddCoop);
 
 import CoopsCollection from "./components/home/CoopsCollection";
 Vue.component("CoopsCollection", CoopsCollection);

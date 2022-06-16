@@ -29,7 +29,7 @@
 
 <script>
 export default {
-    name: "AddButton",
+    name: "AddCoop",
     data() {
         return {
             hideForm: true,

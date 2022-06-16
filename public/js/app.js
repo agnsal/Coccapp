@@ -2079,10 +2079,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddButton.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddButton.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddCoop.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddCoop.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2120,7 +2120,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "AddButton",
+  name: "AddCoop",
   data: function data() {
     return {
       hideForm: true,
@@ -2161,9 +2161,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Coop',
-  props: ['coopData'],
+  props: ['coopData', 'detailed'],
   mounted: function mounted() {
     console.log('Coop mounted.');
   },
@@ -2187,8 +2188,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
 //
 //
 //
@@ -2321,7 +2320,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mdi_font_css_materialdesignicons_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mdi/font/css/materialdesignicons.css */ "./node_modules/@mdi/font/css/materialdesignicons.css");
 /* harmony import */ var _components_home_TopMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/home/TopMenu */ "./resources/js/components/home/TopMenu.vue");
 /* harmony import */ var _components_home_Coop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/home/Coop */ "./resources/js/components/home/Coop.vue");
-/* harmony import */ var _components_home_AddButton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/home/AddButton */ "./resources/js/components/home/AddButton.vue");
+/* harmony import */ var _components_home_AddCoop__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/home/AddCoop */ "./resources/js/components/home/AddCoop.vue");
 /* harmony import */ var _components_home_CoopsCollection__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/home/CoopsCollection */ "./resources/js/components/home/CoopsCollection.vue");
 /* harmony import */ var _Coccapp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Coccapp */ "./resources/js/Coccapp.vue");
 /**
@@ -2367,7 +2366,7 @@ vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("TopMenu", _components_hom
 
 vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("Coop", _components_home_Coop__WEBPACK_IMPORTED_MODULE_5__["default"]);
 
-vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("AddButton", _components_home_AddButton__WEBPACK_IMPORTED_MODULE_6__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("AddCoop", _components_home_AddCoop__WEBPACK_IMPORTED_MODULE_6__["default"]);
 
 vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("CoopsCollection", _components_home_CoopsCollection__WEBPACK_IMPORTED_MODULE_7__["default"]);
 /**
@@ -3316,10 +3315,10 @@ component.options.__file = "resources/js/Coccapp.vue"
 
 /***/ }),
 
-/***/ "./resources/js/components/home/AddButton.vue":
-/*!****************************************************!*\
-  !*** ./resources/js/components/home/AddButton.vue ***!
-  \****************************************************/
+/***/ "./resources/js/components/home/AddCoop.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/components/home/AddCoop.vue ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3327,8 +3326,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _AddButton_vue_vue_type_template_id_6b473924_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddButton.vue?vue&type=template&id=6b473924&scoped=true& */ "./resources/js/components/home/AddButton.vue?vue&type=template&id=6b473924&scoped=true&");
-/* harmony import */ var _AddButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddButton.vue?vue&type=script&lang=js& */ "./resources/js/components/home/AddButton.vue?vue&type=script&lang=js&");
+/* harmony import */ var _AddCoop_vue_vue_type_template_id_23b481ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AddCoop.vue?vue&type=template&id=23b481ee&scoped=true& */ "./resources/js/components/home/AddCoop.vue?vue&type=template&id=23b481ee&scoped=true&");
+/* harmony import */ var _AddCoop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AddCoop.vue?vue&type=script&lang=js& */ "./resources/js/components/home/AddCoop.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -3338,19 +3337,19 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _AddButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _AddButton_vue_vue_type_template_id_6b473924_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _AddButton_vue_vue_type_template_id_6b473924_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _AddCoop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AddCoop_vue_vue_type_template_id_23b481ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _AddCoop_vue_vue_type_template_id_23b481ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "6b473924",
+  "23b481ee",
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/home/AddButton.vue"
+component.options.__file = "resources/js/components/home/AddCoop.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -3488,10 +3487,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/home/AddButton.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/components/home/AddButton.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************/
+/***/ "./resources/js/components/home/AddCoop.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/home/AddCoop.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3499,8 +3498,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddButton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddButton.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddCoop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddCoop.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddCoop.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AddCoop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -3582,19 +3581,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/home/AddButton.vue?vue&type=template&id=6b473924&scoped=true&":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/components/home/AddButton.vue?vue&type=template&id=6b473924&scoped=true& ***!
-  \***********************************************************************************************/
+/***/ "./resources/js/components/home/AddCoop.vue?vue&type=template&id=23b481ee&scoped=true&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/home/AddCoop.vue?vue&type=template&id=23b481ee&scoped=true& ***!
+  \*********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddButton_vue_vue_type_template_id_6b473924_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddButton_vue_vue_type_template_id_6b473924_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddCoop_vue_vue_type_template_id_23b481ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddCoop_vue_vue_type_template_id_23b481ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddButton_vue_vue_type_template_id_6b473924_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddButton.vue?vue&type=template&id=6b473924&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddButton.vue?vue&type=template&id=6b473924&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AddCoop_vue_vue_type_template_id_23b481ee_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AddCoop.vue?vue&type=template&id=23b481ee&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddCoop.vue?vue&type=template&id=23b481ee&scoped=true&");
 
 
 /***/ }),
@@ -3680,10 +3679,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddButton.vue?vue&type=template&id=6b473924&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddButton.vue?vue&type=template&id=6b473924&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddCoop.vue?vue&type=template&id=23b481ee&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/home/AddCoop.vue?vue&type=template&id=23b481ee&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3796,17 +3795,21 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "p",
-    [
-      _vm._v(_vm._s(_vm.coopData.name) + "\n    "),
-      _c("v-icon", { attrs: { large: "", color: "green darken-2" } }, [
-        _vm._v("\n        mdi-feather\n    "),
-      ]),
-      _vm._v("\n    " + _vm._s(_vm.countedChickens) + "\n"),
-    ],
-    1
-  )
+  return _c("div", [
+    _c(
+      "p",
+      [
+        _vm._v("\n        " + _vm._s(_vm.coopData.name) + "\n        "),
+        _c("v-icon", { attrs: { large: "", color: "green darken-2" } }, [
+          _vm._v("mdi-feather"),
+        ]),
+        _vm._v("\n        " + _vm._s(_vm.countedChickens) + "\n    "),
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _vm.detailed ? _c("p", [_vm._v("\n        Details!!!\n    ")]) : _vm._e(),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -3846,29 +3849,41 @@ var render = function () {
         [
           _c(
             "v-list-item-group",
-            [
-              _vm._l(_vm.coopsCollection, function (item, i) {
-                return _c(
-                  "v-list-item",
-                  { key: i },
-                  [
-                    _c(
-                      "v-list-item-content",
-                      [_c("Coop", { attrs: { "coop-data": item } })],
-                      1
-                    ),
-                  ],
-                  1
-                )
-              }),
-              _vm._v(" "),
-              _c("AddButton"),
-            ],
-            2
+            _vm._l(_vm.coopsCollection, function (item, i) {
+              return _c(
+                "v-list-item",
+                { key: i },
+                [
+                  _c(
+                    "v-list-item-content",
+                    {
+                      on: {
+                        click: function ($event) {
+                          _vm.selectedCoop = i
+                        },
+                      },
+                    },
+                    [
+                      _c("Coop", {
+                        attrs: {
+                          "coop-data": item,
+                          detailed: _vm.selectedCoop === i,
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              )
+            }),
+            1
           ),
         ],
         1
       ),
+      _vm._v(" "),
+      _c("AddCoop"),
     ],
     1
   )
