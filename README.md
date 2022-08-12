@@ -12,6 +12,11 @@ Work in progress...
     - ```composer require spatie/laravel-backup```
     - ```php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"```
 - To run Laravel Backup on DB: ```php artisan backup:run --only-db```
+- [To configure and use Laravel Sanctum (https://laravel.com/docs/8.x/sanctum#introduction)]:
+  - ```php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"```
+  - ```php artisan migrate```
+  - Add Sanctum's middleware to the api middleware group within app/Http/Kernel.php file
+  - Add "SANCTUM_STATEFUL_DOMAINS=<domain>" to .env file
 - To use Laravel Telescope:
     - To install Laravel Telescope:
         - ```composer require laravel/telescope```
@@ -19,12 +24,6 @@ Work in progress...
         - ```php artisan migrate```
         - Follow the steps defined in https://laravel.com/docs/9.x/telescope
     - To access Laravel Telescope Dashboard, go to http://127.0.0.1:8000/telescope
-- To install Laravel DB Dumper (https://github.com/spatie/db-dumper): ```composer require spatie/db-dumper```
-- To install Laravel ActivityLog (https://spatie.be/docs/laravel-activitylog/v4/introduction):
-    - ```composer require spatie/laravel-activitylog```
-    - Define "ACTIVITY_LOGGER_DB_CONNECTION" in .env
-    - ```php artisan vendor:publish --provider="Spatie\Activitylog\ActivitylogServiceProvider" --tag="activitylog-migrations"```
-    - See https://spatie.be/docs/laravel-activitylog/v4/installation-and-setup for more info
 - To create a model: ```php artisan make:model <ModelName>``` use -m flag for Migration too or use -a flag for Migration and Controller too
 - To create Model Resources: ```php artisan make:resource <ResourceName>Resource```
 - To create a Cast: ```php artisan make:cast <CastName>```
