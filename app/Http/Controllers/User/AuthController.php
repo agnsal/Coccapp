@@ -6,10 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\User\Auth\LoginRequest;
 use App\Http\Requests\User\Auth\RegisterRequest;
 use App\Models\User;
-use Illuminate\Http\Client\Request;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -20,10 +17,12 @@ class AuthController extends Controller
     }
 
     public function login(LoginRequest $request){
-        $v = $request->validated();
-        $u = User::where('email', $v['email'])->first();
-        $result = (null === $u || $v['password'] !== $u->password)?response()->json(['message' => 'Credentials are not valid'])->setStatusCode(403):response()->json(['message' => 'User logged in', 'token' => $u->createToken('API Token')->plainTextToken]);
+        $result = !Auth::attempt($request->validated())?response()->json(['message' => 'Credentials are not valid'])->setStatusCode(403):response()->json(['message' => 'User logged in', 'token' => auth()->user()->createToken('API Token')->plainTextToken]);
         return $result;
+        // OLD (verbose version)
+//        $v = $request->validated();
+//        $u = User::where('email', $v['email'])->first();
+//        $result = (null === $u || !Hash::check($v['password'], $u->password))?response()->json(['message' => 'Credentials are not valid'])->setStatusCode(403):response()->json(['message' => 'User logged in', 'token' => $u->createToken('API Token')->plainTextToken]);
     }
 
     public function logout() {
