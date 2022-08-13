@@ -15,3 +15,5 @@ yarn-error.log
 /.idea
 /.vscode
 /OLD
+package-lock.json
+composer.phar

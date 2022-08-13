@@ -6,7 +6,9 @@ Work in progress...
 ## Behind the scenes
 ### Laravel
 - To create the project: ```composer create-project laravel/laravel <ProjectName>```
+  or: ```composer global require laravel/installer && laravel new <ProjectName>```
 - ```cd <ProjectName>```
+- 4. To install eventual php dependencies: php ```composer update && composer install```
 - To run the server: ```php artisan serve```
 - To install Laravel Backup (https://spatie.be/docs/laravel-backup/v8/taking-backups/overview#breadcrumb):
     - ```composer require spatie/laravel-backup```
@@ -56,25 +58,21 @@ Work in progress...
 
 
 ### Laravel + Vue.js + Vuex app creation
-1. Create project folder: ```composer create-project laravel/laravel Coccapp```
-or: ```composer global require laravel/installer && laravel new Coccapp```
-2. ```cd Coccapp```
-3. To run the server: ```php artisan serve```
-4. To install eventual php dependencies: php ```composer update && composer install```
-5. Run the server: ```php artisan serve```
-6. Install Vuex:
-    - To download Vue in Laravel: ```composer require laravel/ui```
-    - To install Vue and all needed dependencies in Laravel: ```php artisan ui vue --auth``` auth flag is needed for authentication only
+1. require laravel/uiInstall Vuex:
+    - To install Laravel UI Vue in Laravel: ```composer require laravel/ui```
+    - To install Vue and all needed dependencies in Laravel: ```php artisan ui vue [--auth]``` auth flag is needed for authentication only (not needed here)
     - ```npm install```
     - ```npm install sass-loader```
     - ```npm install vuex```
-    - ```npm install vuetify```
+    - [```npm install vuetify```]
+    - ```npm install vue bootstrap bootstrap-vue```
     - ```npm install @mdi/font -D```
     - ```npm install axios```
     - ```npm run dev``` or ```npm run watch```
     - ```npm run start``` or ```npm run serve```
     - If you have any issue, try: ```npm clean-install```; ```npm i vue-loader```; [```npm install --global webpack```]; [npm install vue-template-compiler vue-loader@^15.9.7 --save-dev --legacy-peer-deps]
-7. After changing Kernel file: ```composer dump-autoload```
+    - To clear npm cache: ```npm cache clear --force```
+2. After changing Kernel file: ```composer dump-autoload```
 
 
 ## Contacts
