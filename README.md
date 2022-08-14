@@ -62,9 +62,11 @@ Work in progress...
     - To install Laravel UI Vue in Laravel: ```composer require laravel/ui```
     - To install Vue and all needed dependencies in Laravel: ```php artisan ui vue [--auth]``` auth flag is needed for authentication only (not needed here)
     - ```npm install```
+    - ```npm run dev```
+    - ```npm install vuetify```
+    - If any problem occurs, change Vue.js version in package.json file and reinstall or ```npm install vuietify@3.0.0-beta.0```
     - ```npm install sass-loader```
     - ```npm install vuex```
-    - [```npm install vuetify```]
     - ```npm install vue bootstrap bootstrap-vue```
     - ```npm install @mdi/font -D```
     - ```npm install axios```

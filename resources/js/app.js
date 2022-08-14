@@ -5,8 +5,11 @@
  */
 
 import './bootstrap';
-
+import 'vuetify/styles' // Global CSS has to be imported
 import { createApp } from 'vue';
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -15,13 +18,17 @@ import { createApp } from 'vue';
  */
 
 const app = createApp({});
+const vuetify = createVuetify({
+    components,
+    directives,
+})
+app.use(vuetify)
 
 // app.use(BootstrapVue);
 
 import ExampleComponent from './components/ExampleComponent.vue';
 import MainComponent from "./components/MainComponent.vue";
 app.component('main-component', MainComponent);
-
 
 /**
  * The following block of code may be used to automatically register your
