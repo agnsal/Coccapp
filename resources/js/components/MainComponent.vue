@@ -1,21 +1,32 @@
 <template>
     <h1 class="display-3">Coccapp</h1>
-    <login-form :title="title" :schema="schema"></login-form>
+    <general-form :schema="schema"></general-form>
 </template>
 
 <script>
-import LoginForm from "./LoginForm.vue";
+import GeneralForm from "./GeneralForm.vue";
 
 export default {
     name: "MainComponent",
-    components: {LoginForm},
+    components: {GeneralForm},
     data:() => ({
         schema: {
-            title: 'Login',
+            id: null,
+            class: 'm-auto',
+            color: 'success',
+            style: '',
+            title: {
+                label: 'Login',
+                id: 'loginID',
+                class: 'testClass',
+                style: 'margin-left: 50%; color: orange'
+            },
             fields: [
                 {
                     name: 'email',
                     label: 'E-mail',
+                    class: null,
+                    color: 'orange',
                     initValue: '',
                     rules: [
                         v => !!v || 'E-mail is required',
@@ -26,6 +37,8 @@ export default {
                 {
                     name: 'password',
                     label: 'Password',
+                    class: null,
+                    color: 'orange',
                     initValue: '',
                     rules: [
                         v => !!v || 'Password is required'
@@ -34,9 +47,12 @@ export default {
                 }
             ],
             submitButton: {
-                'label': 'Submit',
-                'url': '/api/auth/login'
-            }
+                label: 'Submit',
+                class: 'mr-4',
+                color: 'success',
+                url: '/api/auth/login',
+                nextUrl: 'test'
+            },
         },
     }),
     mounted(){
