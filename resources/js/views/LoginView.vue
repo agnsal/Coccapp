@@ -4,10 +4,10 @@
 </template>
 
 <script>
-import GeneralForm from "./GeneralForm.vue";
+import GeneralForm from "../components/GeneralForm.vue";
 
 export default {
-    name: "MainComponent",
+    name: "LoginView",
     components: {GeneralForm},
     data:() => ({
         schema: {
@@ -51,7 +51,7 @@ export default {
                 class: 'mr-4',
                 color: 'success',
                 url: '/api/auth/login',
-                nextUrl: 'test'
+                nextUrl: 'dashboard'
             },
         },
     }),

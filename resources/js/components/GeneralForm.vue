@@ -45,12 +45,15 @@ export default {
     data:() => ({
         result: {},
         valid: true,
+        dash: null
     }),
     created() {
         this.init()
     },
     // mounted(){
-    //     console.log(this.result)  // Test
+    //     this.dash = this.$router.getRoutes().filter(item => item.name === 'dashboard')  // Test
+    //     // this.$router.push({name: 'dashboard'})
+    //     // this.$router.push('dashboard', ()=>{})
     // },
     methods: {
         init(){
@@ -60,9 +63,11 @@ export default {
             this.$refs.form.validate().then(res => {
                 if (this.valid) {
                     axios.get('/sanctum/csrf-cookie').then(response => {
+                        let t = this
                         axios.post(this.schema.submitButton.url, this.result)
-                            .then(function (response) {
-                                console.log(response)  // Test
+                            .then(function (response){
+                                console.log(t.$router.getRoutes())
+                                t.$router.push({name: 'dashboard'})
                             })
                             .catch(function (response) {
                                 console.log(response)  // Test

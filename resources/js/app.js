@@ -10,25 +10,24 @@ import { createApp } from 'vue';
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import router from "./router";
+
+import Layout from "./Layout.vue";
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
  * registering components with the application instance so they are ready
  * to use in your application's views. An example is included for you.
  */
-
 const app = createApp({});
 const vuetify = createVuetify({
     components,
     directives,
 })
+
 app.use(vuetify)
 
-// app.use(BootstrapVue);
-
-import ExampleComponent from './components/ExampleComponent.vue';
-import MainComponent from "./components/MainComponent.vue";
-app.component('main-component', MainComponent);
+app.component('main-component', Layout);
 
 /**
  * The following block of code may be used to automatically register your
@@ -48,4 +47,4 @@ app.component('main-component', MainComponent);
  * scaffolding. Otherwise, you will need to add an element yourself.
  */
 
-app.mount('#app');
+app.use(router).mount('#app');

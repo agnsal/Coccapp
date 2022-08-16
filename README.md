@@ -66,10 +66,10 @@ Work in progress...
     - ```npm install vuetify```
     - If any problem occurs, change Vue.js version in package.json file and reinstall or ```npm install vuietify@3.0.0-beta.0```
     - ```npm install sass-loader```
-    - ```npm install vuex```
-    - ```npm install vue bootstrap bootstrap-vue```
-    - ```npm install @mdi/font -D```
     - ```npm install axios```
+    - ```npm install vue-router@next```
+    - ```npm install vue-template-compiler```
+    - ```npm install vuex```
     - ```npm run dev``` or ```npm run watch```
     - ```npm run start``` or ```npm run serve```
     - If you have any issue, try: ```npm clean-install```; ```npm i vue-loader```; [```npm install --global webpack```]; [npm install vue-template-compiler vue-loader@^15.9.7 --save-dev --legacy-peer-deps]
