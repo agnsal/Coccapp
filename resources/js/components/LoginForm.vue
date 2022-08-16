@@ -1,4 +1,5 @@
 <template>
+    <p>{{schema.title}}</p>
     <v-form
         ref="form"
         v-model="valid"
@@ -6,27 +7,20 @@
         class="m-auto"
     >
 
-        <v-text-field
-            v-model="email"
-            :rules="emailRules"
-            label="E-mail"
-            required
-        ></v-text-field>
-
-        <v-text-field
-            v-model="password"
-            :rules="passwordRules"
-            label="Password"
-            required
+        <v-text-field v-for="item in schema.fields"
+            v-model="result[item.name]"
+            :rules="item.rules"
+            :label="item.label"
+            :required="item.required"
         ></v-text-field>
 
         <v-btn
             :disabled="!valid"
             color="success"
             class="mr-4"
-            @click="login"
+            @click="submit"
         >
-            Login
+            {{schema.submitButton.label}}
         </v-btn>
 
     </v-form>
@@ -35,32 +29,35 @@
 <script>
 export default {
     name: "LoginForm",
+    props: {
+        schema: Object
+    },
     data:() => ({
+        result: {},
         valid: true,
-        email: '',
-        emailRules: [
-            v => !!v || 'E-mail is required',
-            v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-        ],
-        password: '',
-        passwordRules: [
-            v => !!v || 'Password is required'
-        ],
     }),
+    created() {
+        this.init()
+    },
+    // mounted(){
+    //     console.log(this.result)  // Test
+    // },
     methods: {
-        login() {
-            this.$refs.form.validate()
-            axios.get('/sanctum/csrf-cookie').then(response => {
-                let body = {'email': this.email, 'password': this.password}
-                axios.post('/api/auth/login', body)
-                    .then(function (response) {
-                        console.log(response)  // Test
-                    })
-                    .catch(function (response) {
-                        console.log(response)  // Test
-                    })
-
-            });
+        init(){
+            this.schema.fields.forEach(item => {this.result[item.name] = item.initValue})
+        },
+        submit() {
+            this.$refs.form.validate().then(res =>
+                axios.get('/sanctum/csrf-cookie').then(response => {
+                    axios.post(schema.submitButton.url, this)
+                        .then(function (response) {
+                            console.log(response)  // Test
+                        })
+                        .catch(function (response) {
+                            console.log(response)  // Test
+                        })
+                })
+            )
         }
     }
 }
