@@ -12,6 +12,6 @@
 
     </head>
     <body class="container">
-    <div id="app"><main-component></main-component></div>
+    <div id="app"><layout></layout></div>
     </body>
 </html>

@@ -27,7 +27,7 @@ const vuetify = createVuetify({
 
 app.use(vuetify)
 
-app.component('main-component', Layout);
+app.component('layout', Layout);
 
 /**
  * The following block of code may be used to automatically register your

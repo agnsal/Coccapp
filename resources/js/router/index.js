@@ -1,24 +1,24 @@
 import {createRouter, createWebHistory, isNavigationFailure} from "vue-router";
-import LoginView from "../views/LoginView.vue";
-import DashboardView from "../views/DashboardView.vue";
-import NotFoundView from "../views/NotFoundView.vue";
+import LoginPage from "../pages/LoginPage.vue";
+import DashboardPage from "../pages/DashboardPage.vue";
+import NotFoundPage from "../pages/NotFoundPage.vue";
 
 const prefix = '/app/'
 
 const routes = [
     {
         path: `${prefix}login`,
-        component: LoginView,
+        component: LoginPage,
         name: "login"
     },
     {
         path: `${prefix}dashboard`,
-        component: DashboardView,
+        component: DashboardPage,
         name: "dashboard"
     },
     {
         path: `${prefix}:pathMatch(.*)*`,
-        component: NotFoundView
+        component: NotFoundPage
     },
 ]
 
