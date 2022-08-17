@@ -15,6 +15,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        UserService::register(['name' => 'test', 'email' => 'test@test.com', 'password' => 'test']);
+        UserService::create(['name' => 'test', 'email' => 'test@test.com', 'password' => 'test']);
     }
 }
