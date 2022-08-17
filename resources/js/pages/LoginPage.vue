@@ -1,5 +1,4 @@
 <template>
-    <h1 class="display-3">Coccapp</h1>
     <general-form :schema="schema"></general-form>
 </template>
 
@@ -51,13 +50,14 @@ export default {
                 class: 'mr-4',
                 color: 'success',
                 url: '/api/auth/login',
-                nextUrl: 'dashboard'
+                nextUrl: 'dashboard',
+
             },
         },
     }),
-    mounted(){
-        console.log('Main component Mounted')  // Test
-    }
+    // mounted(){
+    //     console.log('LoginPage component Mounted')  // Test
+    // }
 }
 </script>
 

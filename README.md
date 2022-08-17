@@ -72,7 +72,6 @@ Work in progress...
     - ```npm install vuex```
     - ```npm run dev``` or ```npm run watch```
     - ```npm run start``` or ```npm run serve```
-    - If you have any issue, try: ```npm clean-install```; ```npm i vue-loader```; [```npm install --global webpack```]; [npm install vue-template-compiler vue-loader@^15.9.7 --save-dev --legacy-peer-deps]
     - To clear npm cache: ```npm cache clear --force```
 2. After changing Kernel file: ```composer dump-autoload```
 

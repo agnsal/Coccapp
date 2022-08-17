@@ -1,4 +1,5 @@
 <template>
+    <h1 class="display-3">Coccapp</h1>
     <router-view :key="$route.path"></router-view>
 </template>
 

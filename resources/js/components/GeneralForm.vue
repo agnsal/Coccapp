@@ -66,7 +66,7 @@ export default {
                         let t = this
                         axios.post(this.schema.submitButton.url, this.result)
                             .then(function (response){
-                                console.log(t.$router.getRoutes())
+                                t.$store.dispatch('auth/setToken', response.data['token'])
                                 t.$router.push({name: 'dashboard'})
                             })
                             .catch(function (response) {

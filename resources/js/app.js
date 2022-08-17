@@ -10,8 +10,9 @@ import { createApp } from 'vue';
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-import router from "./router";
 
+import router from "./router"
+import store from "./store"
 import Layout from "./Layout.vue";
 
 /**
@@ -26,7 +27,6 @@ const vuetify = createVuetify({
 })
 
 app.use(vuetify)
-
 app.component('layout', Layout);
 
 /**
@@ -47,4 +47,4 @@ app.component('layout', Layout);
  * scaffolding. Otherwise, you will need to add an element yourself.
  */
 
-app.use(router).mount('#app');
+app.use(router).use(store).mount('#app');
