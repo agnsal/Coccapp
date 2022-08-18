@@ -51,7 +51,12 @@ export default {
                 color: 'success',
                 url: '/api/auth/login',
                 nextUrl: 'dashboard',
-
+                storages: [
+                    {
+                        action: 'auth/setToken',
+                        params: ['token']
+                    }
+                ]
             },
         },
     }),

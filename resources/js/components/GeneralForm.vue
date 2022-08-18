@@ -50,11 +50,6 @@ export default {
     created() {
         this.init()
     },
-    // mounted(){
-    //     this.dash = this.$router.getRoutes().filter(item => item.name === 'dashboard')  // Test
-    //     // this.$router.push({name: 'dashboard'})
-    //     // this.$router.push('dashboard', ()=>{})
-    // },
     methods: {
         init(){
             this.schema.fields.forEach(item => {this.result[item.name] = item.initValue})
@@ -66,8 +61,12 @@ export default {
                         let t = this
                         axios.post(this.schema.submitButton.url, this.result)
                             .then(function (response){
-                                t.$store.dispatch('auth/setToken', response.data['token'])
-                                t.$router.push({name: 'dashboard'})
+                                t.schema.submitButton.storages.forEach(storage => {
+                                    let dParams = []
+                                    storage.params.forEach(param => {dParams.push(response.data[param])})
+                                    t.$store.dispatch(storage.action, ...dParams)
+                                })
+                                t.$router.push({name: t.schema.submitButton.nextUrl})
                             })
                             .catch(function (response) {
                                 console.log(response)  // Test
