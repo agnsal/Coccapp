@@ -19,13 +19,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::prefix('auth')->group(function(){
-    Route::post('/register', [\App\Http\Controllers\User\AuthController::class, 'register'])->name('register');
-    Route::post('/login', [\App\Http\Controllers\User\AuthController::class, 'login'])->name('login');
+    Route::post('/register', [\App\Http\Controllers\User\AuthController::class, 'register']);
+    Route::post('/login', [\App\Http\Controllers\User\AuthController::class, 'login']);
+    Route::get('/loginschema', [\App\Http\Controllers\User\AuthController::class, 'getLoginFormConfig']);
 });
 
 Route::middleware('auth:sanctum')->group(function(){
     Route::get('/test', function(){return response()->json(['message' => 'hi']);});  // Test
-    Route::post('/logout', [\App\Http\Controllers\User\AuthController::class, 'logout'])->name('logout');
+    Route::post('/logout', [\App\Http\Controllers\User\AuthController::class, 'logout']);
 });
 
 

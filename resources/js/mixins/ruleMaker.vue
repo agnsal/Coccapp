@@ -5,10 +5,11 @@ export default {
         derivedRules(){
             let result = {}
             this.schema.fields.forEach(field => {
-                if (null !== field.rules) {
+                if (field.rules) {
                     let correctRules = []
                     field.rules.forEach(rule => {
-                        if(rule.name === 'regexp') correctRules.push(v => rule.param.test(v) || rule.message)
+                        if(rule.type === 'email') correctRules.push(v => /.+@.+\..+/.test(v) || rule.message)
+                        if(rule.type === 'required') correctRules.push(v => !!v || rule.message)
                     })
                     result[field.name] = correctRules
                 }

@@ -16,6 +16,10 @@ class AuthController extends Controller
         return response()->json(['message' => 'User successfully created']);
     }
 
+    public function getLoginFormConfig(){
+        return response()->json(config('app.gui.auth.loginForm'));
+    }
+
     public function login(LoginRequest $request){
         $result = !UserService::authenticate($request->validated())?response()->json(['message' => 'Credentials are not valid'])->setStatusCode(403):response()->json(['message' => 'User logged in', 'token' => UserService::makeToken()]);
         return $result;
