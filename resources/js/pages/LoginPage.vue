@@ -28,9 +28,16 @@ export default {
                     color: 'orange',
                     initValue: '',
                     rules: [
-                        v => !!v || 'E-mail is required',
-                        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+                        {
+                            name: 'regexp',
+                            param: /.+@.+\..+/,
+                            message: 'E-mail must be valid'
+                        },
                     ],
+                    // rules: [
+                    //     v => !!v || 'E-mail is required',
+                    //     v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+                    // ],
                     required: true
                 },
                 {
@@ -39,9 +46,7 @@ export default {
                     class: null,
                     color: 'orange',
                     initValue: '',
-                    rules: [
-                        v => !!v || 'Password is required'
-                    ],
+                    rules: null,
                     required: true
                 }
             ],

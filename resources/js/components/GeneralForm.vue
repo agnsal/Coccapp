@@ -17,7 +17,7 @@
             :class="item.class"
             :color="item.color"
             :style="item.style"
-            :rules="item.rules"
+            :rules="derivedRules[item.name]"
             :label="item.label"
             :required="item.required"
         ></v-text-field>
@@ -47,6 +47,21 @@ export default {
         valid: true,
         dash: null
     }),
+    computed: {
+        derivedRules(){
+            let result = {}
+            this.schema.fields.forEach(field => {
+                if (null !== field.rules) {
+                    let correctRules = []
+                    field.rules.forEach(rule => {
+                        if(rule.name === 'regexp') correctRules.push(v => rule.param.test(v) || rule.message)
+                    })
+                    result[field.name] = correctRules
+                }
+            })
+            return result
+        }
+    },
     created() {
         this.init()
     },
